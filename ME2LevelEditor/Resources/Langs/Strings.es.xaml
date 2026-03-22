@@ -1,0 +1,134 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:sys="clr-namespace:System;assembly=mscorlib">
+
+    <!-- Menú: Archivo -->
+    <sys:String x:Key="Menu_File">_Archivo</sys:String>
+    <sys:String x:Key="Menu_Open">_Abrir</sys:String>
+    <sys:String x:Key="Menu_Save">_Guardar</sys:String>
+    <sys:String x:Key="Menu_SaveAs">Guardar _como...</sys:String>
+    <sys:String x:Key="Menu_ClearAll">Borrar _todas las notas/secciones</sys:String>
+    <sys:String x:Key="Menu_LoadAudio">_Cargar audio</sys:String>
+    <sys:String x:Key="Menu_Quit">_Salir</sys:String>
+
+    <!-- Menú: Vista -->
+    <sys:String x:Key="Menu_View">_Vista</sys:String>
+    <sys:String x:Key="Menu_ZoomToFit">Zoom _ajustar</sys:String>
+
+    <!-- Menú: Edición -->
+    <sys:String x:Key="Menu_Edit">_Edición</sys:String>
+    <sys:String x:Key="Menu_Undo">_Deshacer</sys:String>
+    <sys:String x:Key="Menu_Redo">_Rehacer</sys:String>
+    <sys:String x:Key="Menu_KeyMappings">_Asignación de teclas...</sys:String>
+
+    <!-- Menú: Ayuda -->
+    <sys:String x:Key="Menu_Help">A_yuda</sys:String>
+    <sys:String x:Key="Menu_About">_Acerca de...</sys:String>
+
+    <!-- Menú: Idioma -->
+    <sys:String x:Key="Menu_Language">_Idioma</sys:String>
+
+    <!-- HeaderBar -->
+    <sys:String x:Key="Header_Version">VERSIÓN</sys:String>
+    <sys:String x:Key="Header_Samples">MUESTRAS</sys:String>
+    <sys:String x:Key="Header_DisplayBPM">BPM MOSTRADO</sys:String>
+    <sys:String x:Key="Header_Loudness">VOLUMEN SONORO</sys:String>
+    <sys:String x:Key="Header_Vol">VOL</sys:String>
+
+    <!-- EditorToolBar: Transporte -->
+    <sys:String x:Key="Tool_Restart">Reiniciar desde el inicio</sys:String>
+    <sys:String x:Key="Tool_PlayPause">Reproducir/Pausar desde el cabezal (Espacio)</sys:String>
+    <sys:String x:Key="Tool_Stop">Detener</sys:String>
+
+    <!-- EditorToolBar: Herramientas -->
+    <sys:String x:Key="Tool_Pointer">Puntero</sys:String>
+    <sys:String x:Key="Tool_PointerTip">Puntero (Esc)</sys:String>
+    <sys:String x:Key="Tool_Zone">Zone</sys:String>
+    <sys:String x:Key="Tool_ZoneTip">Obstáculo zone (1)</sys:String>
+    <sys:String x:Key="Tool_Solid">Solid</sys:String>
+    <sys:String x:Key="Tool_SolidTip">Obstáculo solid tap (2)</sys:String>
+    <sys:String x:Key="Tool_Held">Held</sys:String>
+    <sys:String x:Key="Tool_HeldTip">Obstáculo solid held (3)</sys:String>
+
+    <!-- EditorToolBar: Secciones -->
+    <sys:String x:Key="Tool_Low">Bajo</sys:String>
+    <sys:String x:Key="Tool_LowTip">Sección baja intensidad (4)</sys:String>
+    <sys:String x:Key="Tool_Normal">Normal</sys:String>
+    <sys:String x:Key="Tool_NormalTip">Sección intensidad normal (5)</sys:String>
+    <sys:String x:Key="Tool_High">Alto</sys:String>
+    <sys:String x:Key="Tool_HighTip">Sección alta intensidad (6)</sys:String>
+    <sys:String x:Key="Tool_Extreme">Extremo</sys:String>
+    <sys:String x:Key="Tool_ExtremeTip">Sección intensidad extrema (7)</sys:String>
+
+    <!-- EditorToolBar: Otro -->
+    <sys:String x:Key="Tool_AutoRevertTip">Volver automáticamente al Puntero después de colocar un elemento</sys:String>
+    <sys:String x:Key="Tool_AutoRevert">Auto &#x25B2;</sys:String>
+    <sys:String x:Key="Tool_Zoom">Zoom: </sys:String>
+    <sys:String x:Key="Tool_Sample"> | Muestra: </sys:String>
+
+    <!-- SelectionBar -->
+    <sys:String x:Key="Sel_None">Sin selección</sys:String>
+    <sys:String x:Key="Sel_Selection">SELECCIÓN</sys:String>
+    <sys:String x:Key="Sel_Type">Tipo:</sys:String>
+    <sys:String x:Key="Sel_Sample">Muestra:</sys:String>
+    <sys:String x:Key="Sel_HeldDuration">Duración held:</sys:String>
+    <sys:String x:Key="Sel_Intensity">Intensidad:</sys:String>
+    <sys:String x:Key="Sel_Start">Inicio:</sys:String>
+    <sys:String x:Key="Sel_Length">Longitud:</sys:String>
+    <sys:String x:Key="Sel_AngelJump">Angel Jump:</sys:String>
+    <sys:String x:Key="Sel_ItemsSelected"> elementos seleccionados</sys:String>
+
+    <!-- AboutDialog -->
+    <sys:String x:Key="About_Title">Acerca de - ME2 Level Editor</sys:String>
+    <sys:String x:Key="About_CreatedBy">Creado por </sys:String>
+    <sys:String x:Key="About_Disclaimer">Este editor es una herramienta comunitaria independiente y no está afiliado, respaldado ni conectado con Loïc (Icetesy), el creador de Melody's Escape 2.</sys:String>
+    <sys:String x:Key="About_GitHubLink">Repositorio GitHub</sys:String>
+    <sys:String x:Key="About_Close">Cerrar</sys:String>
+
+    <!-- KeyMappingDialog -->
+    <sys:String x:Key="KeyMap_Title">Asignación de teclas - Colocación en vivo</sys:String>
+    <sys:String x:Key="KeyMap_Heading">Teclas de colocación en vivo</sys:String>
+    <sys:String x:Key="KeyMap_Instructions">Presiona las teclas durante la reproducción para colocar elementos en el cabezal. Mantén presionada la tecla Solid para crear una nota Held. Haz clic en un campo de tecla y presiona una nueva tecla para reasignar.</sys:String>
+    <sys:String x:Key="KeyMap_ResetDefaults">Predeterminados</sys:String>
+    <sys:String x:Key="KeyMap_Save">Guardar</sys:String>
+    <sys:String x:Key="KeyMap_Cancel">Cancelar</sys:String>
+
+    <!-- KeyMapping Display Names -->
+    <sys:String x:Key="KeyMap_Zone">Zone</sys:String>
+    <sys:String x:Key="KeyMap_SolidHeld">Solid / Solid Held</sys:String>
+    <sys:String x:Key="KeyMap_SectionLow">Sección Baja</sys:String>
+    <sys:String x:Key="KeyMap_SectionNormal">Sección Normal</sys:String>
+    <sys:String x:Key="KeyMap_SectionHigh">Sección Alta</sys:String>
+    <sys:String x:Key="KeyMap_SectionExtreme">Sección Extrema</sys:String>
+
+    <!-- Context Menu -->
+    <sys:String x:Key="Ctx_Delete">Eliminar</sys:String>
+    <sys:String x:Key="Ctx_ChangeToZone">Cambiar a Zone</sys:String>
+    <sys:String x:Key="Ctx_ChangeToSolid">Cambiar a Solid</sys:String>
+    <sys:String x:Key="Ctx_ChangeToHeld">Cambiar a Solid Held</sys:String>
+    <sys:String x:Key="Ctx_ChangeType">Cambiar tipo</sys:String>
+    <sys:String x:Key="Ctx_AngelJump">Angel Jump</sys:String>
+
+    <!-- MainViewModel messages -->
+    <sys:String x:Key="Msg_ClearAllConfirm">¿Estás seguro de que quieres eliminar todos los obstáculos ({0}) y secciones ({1}) de este nivel?
+
+Esta acción no se puede deshacer.</sys:String>
+    <sys:String x:Key="Msg_ClearAllTitle">Borrar todo</sys:String>
+    <sys:String x:Key="Msg_SaveChanges">¿Guardar cambios?</sys:String>
+    <sys:String x:Key="Msg_NoFile">Sin archivo</sys:String>
+    <sys:String x:Key="Msg_Obstacles">Obstáculos:</sys:String>
+    <sys:String x:Key="Msg_Sections">Secciones:</sys:String>
+    <sys:String x:Key="Msg_Version">Versión {0}.{1}.{2}</sys:String>
+    <sys:String x:Key="Msg_LoadError">No se pudo cargar el archivo.</sys:String>
+    <sys:String x:Key="Msg_SaveError">No se pudo guardar el archivo.</sys:String>
+
+    <!-- Confirm Dialog Buttons -->
+    <sys:String x:Key="Btn_Yes">Sí</sys:String>
+    <sys:String x:Key="Btn_No">No</sys:String>
+    <sys:String x:Key="Btn_Cancel">Cancelar</sys:String>
+
+    <!-- File Dialog Filters -->
+    <sys:String x:Key="Filter_CacheFiles">Archivos caché (*.txt)|*.txt|Todos los archivos (*.*)|*.*</sys:String>
+    <sys:String x:Key="Filter_AudioFiles">Archivos de audio (*.mp3;*.wav;*.flac;*.ogg)|*.mp3;*.wav;*.flac;*.ogg|Todos los archivos (*.*)|*.*</sys:String>
+
+</ResourceDictionary>

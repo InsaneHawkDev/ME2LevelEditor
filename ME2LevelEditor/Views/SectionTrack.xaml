@@ -1,0 +1,7 @@
+<UserControl x:Class="ME2LevelEditor.Views.SectionTrack"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:models="clr-namespace:ME2LevelEditor.Models"
+             Height="40" Background="{StaticResource BgDeep}" ClipToBounds="True">
+    <Canvas x:Name="SectionCanvas" />
+</UserControl>

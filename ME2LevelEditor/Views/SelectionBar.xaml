@@ -1,0 +1,117 @@
+<UserControl x:Class="ME2LevelEditor.Views.SelectionBar"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:vm="clr-namespace:ME2LevelEditor.ViewModels"
+             xmlns:converters="clr-namespace:ME2LevelEditor.Converters"
+             xmlns:models="clr-namespace:ME2LevelEditor.Models">
+    <UserControl.Resources>
+        <Style x:Key="SelLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="{StaticResource TextMuted}" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Margin" Value="8,0,4,0" />
+            <Setter Property="FontSize" Value="11" />
+        </Style>
+        <Style x:Key="SelTextBox" TargetType="TextBox" BasedOn="{StaticResource {x:Type TextBox}}">
+            <Setter Property="Background" Value="{StaticResource BgInput}" />
+            <Setter Property="Foreground" Value="{StaticResource TextPrimary}" />
+            <Setter Property="BorderBrush" Value="{StaticResource BorderMain}" />
+            <Setter Property="CaretBrush" Value="{StaticResource TextPrimary}" />
+            <Setter Property="Width" Value="70" />
+            <Setter Property="VerticalAlignment" Value="Center" />
+            <Setter Property="Padding" Value="4,2" />
+            <Setter Property="FontSize" Value="12" />
+        </Style>
+    </UserControl.Resources>
+    <Border Background="{StaticResource BgPanel}" BorderBrush="{StaticResource BorderSubtle}" BorderThickness="0,1,0,0" Padding="10,6" MinHeight="36">
+        <Grid>
+            <TextBlock Text="{DynamicResource Sel_None}" Foreground="#3a4a5c" VerticalAlignment="Center" FontSize="11">
+                <TextBlock.Style>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Selection.Mode}" Value="{x:Static vm:SelectionMode.None}">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBlock.Style>
+            </TextBlock>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Selection.Mode}" Value="{x:Static vm:SelectionMode.SingleObstacle}">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Style>
+                <TextBlock Text="{DynamicResource Sel_Selection}" Foreground="{StaticResource AccentTeal}" FontWeight="Bold"
+                           FontSize="11" VerticalAlignment="Center" Margin="0,0,8,0" />
+                <TextBlock Text="{DynamicResource Sel_Type}" Style="{StaticResource SelLabel}" />
+                <ComboBox SelectedItem="{Binding Selection.SingleObstacle.Type}" VerticalAlignment="Center" Width="90" Margin="2,0">
+                    <models:ObstacleType>Zone</models:ObstacleType>
+                    <models:ObstacleType>Solid</models:ObstacleType>
+                </ComboBox>
+                <TextBlock Text="{DynamicResource Sel_Sample}" Style="{StaticResource SelLabel}" />
+                <TextBox Text="{Binding Selection.SingleObstacle.SampleId, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SelTextBox}" />
+                <TextBlock Text="{DynamicResource Sel_HeldDuration}" Style="{StaticResource SelLabel}"
+                           Visibility="{Binding Selection.SingleObstacle.IsHeld, FallbackValue=False, Converter={StaticResource BoolToVisibilityConverter}}" />
+                <TextBox Text="{Binding Selection.SingleObstacle.HeldDuration, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SelTextBox}"
+                         Visibility="{Binding Selection.SingleObstacle.IsHeld, FallbackValue=False, Converter={StaticResource BoolToVisibilityConverter}}" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Selection.Mode}" Value="{x:Static vm:SelectionMode.SingleSection}">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Style>
+                <TextBlock Text="{DynamicResource Sel_Selection}" Foreground="{StaticResource AccentTeal}" FontWeight="Bold"
+                           FontSize="11" VerticalAlignment="Center" Margin="0,0,8,0" />
+                <TextBlock Text="{DynamicResource Sel_Intensity}" Style="{StaticResource SelLabel}" />
+                <ComboBox SelectedItem="{Binding Selection.SingleSection.Intensity}" VerticalAlignment="Center" Width="80" Margin="2,0">
+                    <models:IntensityLevel>Low</models:IntensityLevel>
+                    <models:IntensityLevel>Normal</models:IntensityLevel>
+                    <models:IntensityLevel>High</models:IntensityLevel>
+                    <models:IntensityLevel>Extreme</models:IntensityLevel>
+                </ComboBox>
+                <TextBlock Text="{DynamicResource Sel_Start}" Style="{StaticResource SelLabel}" />
+                <TextBox Text="{Binding Selection.SingleSection.StartSample, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SelTextBox}" />
+                <TextBlock Text="{DynamicResource Sel_Length}" Style="{StaticResource SelLabel}" />
+                <TextBox Text="{Binding Selection.SingleSection.Length, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource SelTextBox}" />
+                <TextBlock Text="{DynamicResource Sel_AngelJump}" Style="{StaticResource SelLabel}" />
+                <CheckBox IsChecked="{Binding Selection.SingleSection.IsAngelJump}" VerticalAlignment="Center" Margin="4,0" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+                <StackPanel.Style>
+                    <Style TargetType="StackPanel">
+                        <Setter Property="Visibility" Value="Collapsed" />
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Selection.Mode}" Value="{x:Static vm:SelectionMode.MultipleObstacles}">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Selection.Mode}" Value="{x:Static vm:SelectionMode.MultipleSections}">
+                                <Setter Property="Visibility" Value="Visible" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </StackPanel.Style>
+                <TextBlock Text="{DynamicResource Sel_Selection}" Foreground="{StaticResource AccentTeal}" FontWeight="Bold"
+                           FontSize="11" VerticalAlignment="Center" Margin="0,0,8,0" />
+                <TextBlock Foreground="{StaticResource TextPrimary}" VerticalAlignment="Center" FontSize="12">
+                    <Run Text="{Binding Selection.SelectionCount, Mode=OneWay}" />
+                    <Run Text="{DynamicResource Sel_ItemsSelected}" />
+                </TextBlock>
+            </StackPanel>
+        </Grid>
+    </Border>
+</UserControl>

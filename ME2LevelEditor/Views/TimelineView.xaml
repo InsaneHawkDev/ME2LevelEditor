@@ -1,0 +1,35 @@
+<UserControl x:Class="ME2LevelEditor.Views.TimelineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:controls="clr-namespace:ME2LevelEditor.Controls"
+             Background="{StaticResource BgDeep}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <controls:WaveformRenderer x:Name="Waveform"
+                WaveformSamples="{Binding Audio.WaveformSamples}"
+                ZoomLevel="{Binding Timeline.ZoomLevel}"
+                ScrollOffsetSamples="{Binding Timeline.ScrollOffsetSamples}"
+                TotalSamples="{Binding Timeline.TotalSamples}"
+                AudioToAnalysisRatio="{Binding AudioToAnalysisRatio}" />
+            <controls:TimelineCanvas x:Name="Timeline"
+                Obstacles="{Binding Obstacles}"
+                Sections="{Binding Sections}"
+                ZoomLevel="{Binding Timeline.ZoomLevel}"
+                ScrollOffsetSamples="{Binding Timeline.ScrollOffsetSamples}"
+                TotalSamples="{Binding Timeline.TotalSamples}"
+                PlayheadSample="{Binding Timeline.PlayheadSample}"
+                DurationSeconds="{Binding Timeline.DurationSeconds}"
+                ViewportWidth="{Binding Timeline.ViewportWidthPixels, Mode=OneWayToSource}" />
+        </Grid>
+        <ScrollBar Grid.Row="1" Orientation="Horizontal"
+                   Minimum="0"
+                   Maximum="{Binding Timeline.TotalSamples}"
+                   Value="{Binding Timeline.ScrollOffsetSamples}"
+                   ViewportSize="{Binding Timeline.ViewportWidthPixels}"
+                   SmallChange="10" LargeChange="100" />
+    </Grid>
+</UserControl>
