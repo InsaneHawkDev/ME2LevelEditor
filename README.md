@@ -5,7 +5,7 @@
 <h1 align="center">ME2 Level Editor</h1>
 
 <p align="center">
-  A community-built level editor for <strong>Melody's Escape 2</strong> — create, edit, and fine-tune rhythm game levels with a visual timeline interface.
+  A community-built level editor for <strong>Melody's Escape 2</strong> — create, edit, and fine-tune levels with a visual timeline interface.
 </p>
 
 <p align="center">
