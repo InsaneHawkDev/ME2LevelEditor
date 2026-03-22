@@ -33,7 +33,7 @@
             <TextBlock Foreground="{StaticResource TextMuted}" FontSize="11" TextWrapping="Wrap" Margin="0,12,0,0"
                        Text="{DynamicResource About_Disclaimer}" />
             <TextBlock Margin="0,16,0,0" FontSize="12">
-                <Hyperlink x:Name="RepoLink" NavigateUri="https://github.com/music-cat-bread/ME2-Level-Editor" RequestNavigate="OnLinkNavigate"
+                <Hyperlink x:Name="RepoLink" NavigateUri="https://github.com/InsaneHawkDev/ME2LevelEditor" RequestNavigate="OnLinkNavigate"
                            Foreground="{StaticResource AccentCyan}" TextDecorations="Underline">
                     <Run Text="{DynamicResource About_GitHubLink}" />
                 </Hyperlink>
