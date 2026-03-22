@@ -69,7 +69,7 @@ Extract the archive and run `ME2LevelEditor.exe`. No installation required.
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/music-cat-bread/ME2-Level-Editor.git
+   git clone https://github.com/InsaneHawkDev/ME2LevelEditor.git
    ```
 
 2. Open `ME2LevelEditor/ME2LevelEditor.sln` in Visual Studio.
