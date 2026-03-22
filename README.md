@@ -9,8 +9,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ItemME/ME2LevelEditor/releases/latest">
-    <img src="https://img.shields.io/github/v/release/ItemME/ME2LevelEditor?style=flat-square&color=00bcd4" alt="Latest Release" />
+  <a href="https://github.com/InsaneHawkDev/ME2LevelEditor/releases/latest">
+    <img src="https://img.shields.io/github/v/release/InsaneHawkDev/ME2LevelEditor?style=flat-square&color=00bcd4" alt="Latest Release" />
   </a>
   <img src="https://img.shields.io/badge/.NET_Framework-4.8-purple?style=flat-square" alt=".NET Framework 4.8" />
   <img src="https://img.shields.io/badge/platform-Windows-blue?style=flat-square" alt="Windows" />
@@ -50,7 +50,7 @@ Live placement keys are fully customizable via **Edit > Key Mappings**.
 
 ## Download
 
-Download the latest release from the [**Releases page**](https://github.com/ItemME/ME2LevelEditor/releases/latest).
+Download the latest release from the [**Releases page**](https://github.com/InsaneHawkDev/ME2LevelEditor/releases/latest).
 
 Extract the archive and run `ME2LevelEditor.exe`. No installation required.
 
