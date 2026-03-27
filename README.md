@@ -5,7 +5,7 @@
 <h1 align="center">ME2 Level Editor</h1>
 
 <p align="center">
-  A community-built level editor for <strong>Melody's Escape 2</strong> — Create, edit, and fine-tune levels with a visual timeline interface.
+  A community-built level editor for <strong>Melody's Escape 2</strong> — Create, edit, and fine-tune generated levels with a visual timeline interface.
 </p>
 
 <p align="center">
@@ -25,7 +25,7 @@
 - **Intensity sections** — Define Low, Normal, High, and Extreme sections with Angel Jump transitions
 - **Audio playback** — Load and play MP3, OGG, WAV, FLAC files with transport controls
 - **Editing tools** — Full undo/redo, property inspector, metadata editing (BPM, loudness, samples)
-- **Level cache support** — Open and save ME2 level cache files (v0.8.1 and v0.8.4 formats)
+- **Level cache support** — Open and save ME2 level cache files
 - **Localization** — Available in English, French, Italian, and Spanish
 
 ### Keyboard Shortcuts
